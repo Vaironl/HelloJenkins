@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh 'echo test'
                 sh 'python3 --version'
+                sh 'python3 Driver.py'
             }
         }
     }
