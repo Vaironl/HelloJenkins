@@ -4,8 +4,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo test'
-                sh 'python3 --version'
-                sh 'python3 Driver.py'
+                sh 'python --version'
+                sh 'python Driver.py'
             }
         }
     }
