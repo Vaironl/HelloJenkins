@@ -6,7 +6,7 @@ pipeline {
         sh 'python test.py'
       }
       post {
-        always {junit 'test-report/*.xml'}
+        always {junit 'test-reports/*.xml'}
       }
     }
   }
