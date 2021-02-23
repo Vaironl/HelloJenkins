@@ -6,9 +6,15 @@ pipeline {
 
   }
   stages {
-    stage('build') {
+    stage('run main') {
       steps {
         sh 'python Driver.py'
+      }
+    }
+
+    stage('run tests') {
+      steps {
+        sh 'python Test.py'
       }
     }
 
