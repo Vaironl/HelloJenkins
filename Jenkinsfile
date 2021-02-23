@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'python:3.9.2'
-    }
-
-  }
+  agent { dockerfile true}
   stages {
     //Python does not need to 'build'. But the following build stage installs the needed requirements
     stage('build') {
