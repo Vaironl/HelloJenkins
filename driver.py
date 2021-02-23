@@ -9,7 +9,7 @@ def index():
 
 @app.route('/hello/<firstname>')
 def hello(firstname):
-    return '<h1>Hello %s</h1>\n' % escape(firstname)
+    return '<h1>Hello %s!</h1>\n' % escape(firstname)
 
 if __name__ == '__main__':
     app.run()

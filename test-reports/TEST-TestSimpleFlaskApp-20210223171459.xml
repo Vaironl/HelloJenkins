@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<testsuite errors="0" failures="0" name="TestSimpleFlaskApp-20210223171459" tests="1" time="0.007">
+	<testcase classname="TestSimpleFlaskApp" name="test_hello_with_name" time="0.007"/>
+	<system-out>
+<![CDATA[]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>
