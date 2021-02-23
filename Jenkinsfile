@@ -1,16 +1,13 @@
 pipeline {
-  agent {
-    docker {
-      image 'python:3.9.2'
-    }
-
-  }
+  agent { dockerfile true}
   stages {
-    stage('build') {
+    stage('test') {
       steps {
-        sh 'python Driver.py'
+        sh 'python test.py'
+      }
+      post {
+        always {junit 'test-reports/*.xml'}
       }
     }
-
   }
 }
