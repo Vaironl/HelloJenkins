@@ -9,6 +9,5 @@ pipeline {
         always {junit 'test-report/*.xml'}
       }
     }
-
   }
 }
