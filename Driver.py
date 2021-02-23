@@ -7,6 +7,5 @@ class TestStringMethods(unittest.TestCase):
     def test_strip(self):
         self.assertEqual("     foo     ".strip(), "foo")
 
-
 if __name__ == '__main__':
     unittest.main()
