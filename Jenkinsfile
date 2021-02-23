@@ -6,15 +6,16 @@ pipeline {
 
   }
   stages {
-    stage('run main') {
+    //Python does not need to 'build'. But the following build stage installs the needed requirements
+    stage('build') {
       steps {
-        sh 'python Driver.py'
+        sh 'pip install -r requirements.txt'
       }
     }
 
-    stage('run tests') {
+    stage('test') {
       steps {
-        sh 'python Test.py'
+        sh 'python test.py'
       }
     }
 
