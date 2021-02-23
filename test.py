@@ -1,5 +1,6 @@
 import unittest
 from driver import app
+
 class TestSimpleFlaskApp(unittest.TestCase):
     def setUp(self):
         app.testing = True
