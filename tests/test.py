@@ -1,5 +1,5 @@
 import unittest
-from driver import app
+from app.driver import app
 
 class TestSimpleFlaskApp(unittest.TestCase):
     def setUp(self):

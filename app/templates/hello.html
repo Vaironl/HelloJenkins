@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello Page</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+    <body>
+    {% if firstname %}
+    <h1>Hello, {{ firstname }}!</h1>
+    {% else %}
+    <h1>Hello, World!</h1>
+    {% endif %}
+    </body>
+</html>
