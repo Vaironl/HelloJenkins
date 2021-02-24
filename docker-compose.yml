@@ -8,7 +8,6 @@ services:
       - "5000:5000"
     volumes: 
       - ./app/:/usr/src/app/
-      - ./templates/index.html:/usr/src/app/index.html
 
     command: python /usr/src/app/driver.py
     
