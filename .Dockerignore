@@ -1,0 +1,10 @@
+# Ignore cache files
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+/test-reports
+
+# Git commits
+.git
