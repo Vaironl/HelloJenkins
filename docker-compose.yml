@@ -2,6 +2,5 @@ version: "3.9"
 services:
   main-program:
     image: hellojenkins-local-dev:latest
-    container_name: "Flask App Program"
     ports: 
       - "5000:5000"

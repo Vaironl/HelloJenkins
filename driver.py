@@ -12,4 +12,4 @@ def hello(firstname):
     return '<h1>Hello %s!</h1>\n' % escape(firstname)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
