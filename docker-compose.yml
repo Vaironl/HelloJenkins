@@ -1,0 +1,6 @@
+version: "3.9"
+services:
+  main-program:
+    container_name: "Flask App Program"
+  ports: 
+    - "5000:5000"
