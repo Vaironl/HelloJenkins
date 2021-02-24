@@ -6,5 +6,5 @@ __pycache__
 
 /test-reports
 
-# Git commits
-.git
+# Git related files
+.git*
