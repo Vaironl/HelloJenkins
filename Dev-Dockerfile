@@ -1,4 +1,4 @@
-# This Dockerfile is meant to be run by Jenkins
+# This Dockerfile is meant to be run by locally for development.
 FROM python:3.9.2
 
 WORKDIR /usr/src/app
