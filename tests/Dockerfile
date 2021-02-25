@@ -2,10 +2,10 @@ FROM python:3.9.2-alpine
 
 WORKDIR /usr/src/tests
 
-COPY requirements.txt ./
+COPY /requirements/requirements.txt .
 
-RUN pip install -r requirements.txt
+# RUN pip install -r requirements.txt
 
-COPY . .
+# COPY . .
 
-CMD [ "python", "test.py" ]
+# CMD [ "python", "test_driver.py" ]
