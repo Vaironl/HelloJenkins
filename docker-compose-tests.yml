@@ -6,6 +6,10 @@ services:
     build:
       context: .
       dockerfile: tests/Dockerfile
-    command: pytest test_driver.py
-      # volumes: 
-      #   - app-files:/usr/src/app
+
+    volumes: 
+    - ./tests:/usr/src/tests
+    - ./app:/usr/src/app
+
+    command: tail -f
+    # command: pytest test_driver.py

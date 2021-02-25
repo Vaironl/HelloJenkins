@@ -10,4 +10,4 @@ services:
     volumes: 
       - ./requirements:/usr/src/requirements
       - ./app:/usr/src/app
-    command: tail -f
+    command: python driver.py
