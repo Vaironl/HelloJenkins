@@ -1,12 +1,11 @@
-# This Dockerfile is meant to be run by locally for development.
 FROM python:3.9.2-alpine
 
 WORKDIR /usr/src/app
 
 COPY requirements.txt ./
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 COPY . .
 
-#CMD [ "python", "driver.py" ]
+CMD [ "python", "driver.py" ]
