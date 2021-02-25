@@ -3,16 +3,17 @@ version: "3.9"
 services:
   app:
     build: app
-    volumes: 
-      - app-files:/usr/src/app/
+    volumes:
+      - /requirements/requirements.txt:/usr/src/app/
+      # - app-files:/usr/src/app/
       # Overriding default command and doing nothing as I only need the app folder files.
-      command: 
+      command: "false"
 
-  tests:
-    build: tests
-    volumes: 
-      - app-files:/usr/src/app
+  # tests:
+  #   build: tests
+  #   volumes: 
+  #     - app-files:/usr/src/app
 
 volumes:
   #volume to combine app and test files/folders.
-  app-files
+  app-files:

@@ -1,6 +1,6 @@
 FROM python:3.9.2-alpine
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/tests
 
 COPY requirements.txt ./
 
@@ -8,4 +8,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD [ "python", "driver.py" ]
+CMD [ "python", "test.py" ]
