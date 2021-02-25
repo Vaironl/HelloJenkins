@@ -1,7 +1,8 @@
 from flask import Flask, render_template
 from markupsafe import escape
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="web/templates/")
+app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 @app.route('/')
 def index():
