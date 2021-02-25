@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  app:
+    build: app
+    volumes: 
+      - app-files:/usr/src/app/
+
+  tests:
+    build: web
+    volumes: 
+      - app-files:/usr/src/web
+
+volumes:
+  #volume to combine app and test files/folders.
+  app-files
