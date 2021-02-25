@@ -2,10 +2,8 @@ version: "3.9"
 
 services:
   web:
-    ports: 
-      - "80:80"
     volumes: 
-      - all-files:/usr/src/web
+      - web-files:/usr/src/web
 
     build: web
     command: tail -f /dev/null
@@ -14,9 +12,9 @@ services:
     ports: 
       - "5000:5000"
     volumes: 
-      - all-files:/usr/src/app
+      - web-files:/usr/src/app/web
     build: app
 
 volumes:
   #volume to combine app and web files/folders.
-  all-files:
+  web-files:
