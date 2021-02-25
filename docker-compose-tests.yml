@@ -5,11 +5,13 @@ services:
     build: app
     volumes: 
       - app-files:/usr/src/app/
+      # Overriding default command and doing nothing as I only need the app folder files.
+      command: 
 
   tests:
-    build: web
+    build: tests
     volumes: 
-      - app-files:/usr/src/web
+      - app-files:/usr/src/app
 
 volumes:
   #volume to combine app and test files/folders.
