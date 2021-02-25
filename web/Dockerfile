@@ -4,5 +4,3 @@ FROM alpine:3
 WORKDIR /usr/src/web
 
 COPY ./ /usr/src/
-
-CMD [ "sh" ]

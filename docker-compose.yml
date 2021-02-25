@@ -8,6 +8,8 @@ services:
     volumes: 
       - all-files:/usr/src/web
 
+    command: tail -f /dev/null
+
   app:
     ports: 
       - "5000:5000"
