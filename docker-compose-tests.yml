@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: tests/Dockerfile
-    command: pytest test_basic.py
+    command: pytest test_driver.py
       # volumes: 
       #   - app-files:/usr/src/app
 
