@@ -6,15 +6,15 @@ services:
     ports: 
       - "80:80"
     volumes: 
-      - all-files:/usr/src/web/
+      - all-files:/usr/src/web
 
   app:
-    build: app
-    container_name: python-development
     ports: 
       - "5000:5000"
     volumes: 
       - all-files:/usr/src/app
+    build: app
 
 volumes:
-  - all-files: #volume to combine app and web files/folders.
+  #volume to combine app and web files/folders.
+  all-files:
