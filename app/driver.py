@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 from markupsafe import escape
 
-app = Flask(__name__, template_folder="web/templates/")
+app = Flask(__name__, template_folder='web/templates/', static_folder='web/static')
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 @app.route('/')
