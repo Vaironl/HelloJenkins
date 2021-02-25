@@ -1,2 +1,4 @@
 *.pyc
 /test-reports
+/__pycache__
+/.pytest_cache

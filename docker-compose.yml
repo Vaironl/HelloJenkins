@@ -1,13 +1,20 @@
 version: "3.9"
 
 services:
-  main-program:
-    container_name: python-development
-    image: hellojenkins-local-dev:latest
+  web:
+    volumes: 
+      - web-files:/usr/src/web
+
+    build: web
+    command: tail -f /dev/null
+
+  app:
     ports: 
       - "5000:5000"
     volumes: 
-      - ./app/:/usr/src/app/
+      - web-files:/usr/src/app/web
+    build: app
 
-    command: python /usr/src/app/driver.py
-    
+volumes:
+  #volume to combine app and web files/folders.
+  web-files:
