@@ -2,10 +2,9 @@ FROM python:3.9.2-alpine
 
 WORKDIR /usr/src/tests
 
+# Meant to be run from parent context
 COPY /requirements/requirements.txt .
 
-# RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
-# COPY . .
-
-# CMD [ "python", "test_driver.py" ]
+COPY tests/ .

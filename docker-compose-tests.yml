@@ -1,10 +1,12 @@
 version: "3.9"
+# This composed file is used to run Python tests
 
 services:
   tests:
     build:
       context: .
       dockerfile: tests/Dockerfile
+    command: pytest test_basic.py
       # volumes: 
       #   - app-files:/usr/src/app
 
