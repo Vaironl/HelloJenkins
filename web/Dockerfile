@@ -3,4 +3,4 @@ FROM alpine:3
 
 WORKDIR /usr/src/web
 
-COPY ./ /usr/src/
+COPY . /usr/src/web
