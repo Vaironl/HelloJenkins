@@ -3,6 +3,7 @@
 *.pyc
 *.pyo
 *.pyd
+Dockerfile
 
 /test-reports
 

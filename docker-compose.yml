@@ -7,10 +7,8 @@ services:
         dockerfile: app/Dockerfile
     ports: 
       - "5000:5000"
-    command: tail -f
     volumes: 
+      - ./web:/usr/src/app/web
       - ./requirements:/usr/src/requirements
-      # - web:/usr/src/web
-      # - requirements:/usr/src/requirements
-      # - app:/usr/src/app
-      
+      - ./app:/usr/src/app
+    command: tail -f
