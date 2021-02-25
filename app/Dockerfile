@@ -1,6 +1,6 @@
 FROM python:3.9.2-alpine
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/app/
 
 COPY requirements.txt ./
 
