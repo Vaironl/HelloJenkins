@@ -1,14 +1,11 @@
-from flask import app
+import flask
 import pytest
+from pathlib import Path
+from app.driver import app
 
+@pytest.fixture
 def setUp():
-    app.testing = True
-    self.app = app.test_client()
+    yield app.test_client()
 
-def test_hello_with_name(self):
-    name = "John"
-    rv = self.app.get('/hello/John')
-    assert rv.status == '200 OK'
-    assert rv.data == b'<h1>Hello John!</h1>\n'
-        
-# if __name__ == '__main__':
+def test_index(client):
+    return app.
