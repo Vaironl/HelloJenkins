@@ -1,20 +1,16 @@
 version: "3.9"
 
 services:
-  web:
-    volumes: 
-      - web-files:/usr/src/web
-
-    build: web
-    command: tail -f /dev/null
-
   app:
+    build:
+        context: .
+        dockerfile: app/Dockerfile
     ports: 
       - "5000:5000"
+    command: tail -f
     volumes: 
-      - web-files:/usr/src/app/web
-    build: app
-
-volumes:
-  #volume to combine app and web files/folders.
-  web-files:
+      - ./requirements:/usr/src/requirements
+      # - web:/usr/src/web
+      # - requirements:/usr/src/requirements
+      # - app:/usr/src/app
+      
