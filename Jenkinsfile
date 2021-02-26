@@ -1,7 +1,7 @@
 node {
   checkout scm
 
-  def customImage = docker.build('flask-env:1.0', 'tests .')
+  def customImage = docker.build('flask-env:1.0', '-f tests/Dockerfile .')
 
   customImage.inside{
     sh 'ls'
