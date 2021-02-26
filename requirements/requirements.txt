@@ -1,2 +1,1 @@
 flask
-pytest == 6.2.2
