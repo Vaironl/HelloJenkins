@@ -2,6 +2,7 @@ pipeline {
   agent {
     dockerfile {
       dir 'tests'
+      additionalBuildArgs '--build-arg -t flasks_tests_demo .'
     }
   }
 
