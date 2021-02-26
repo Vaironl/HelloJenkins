@@ -5,9 +5,12 @@ services:
     build:
         context: .
         dockerfile: app/Dockerfile
+
     ports: 
       - "5000:5000"
+      
     volumes: 
       - ./requirements:/usr/src/requirements
       - ./app:/usr/src/app
+
     command: python driver.py
