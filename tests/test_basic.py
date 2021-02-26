@@ -1,7 +1,5 @@
-import pytest
+from app.basic import basic_str
 
-def inc(x):
-    return x+1
-
-def tests_answer():
-    assert inc(4) == 5
+class TestsBasicClass:
+    def test_k_basic(self):
+        assert basic_str() == 'HI WORLD!'
