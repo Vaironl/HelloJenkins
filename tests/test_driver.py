@@ -15,9 +15,11 @@ def test_index_page(client : FlaskClient):
     assert b'Hello World' in rv.data
 
 def tests_hello_page(client: FlaskClient):
-    rv = client.get('/hello/You')
+    rv = client.get('/hello/')
     assert b'Hello Page' in rv.data
+    assert b'Hello, World(s)!' in rv.data
 
-# def tests_hello_page_with_name(client: FlaskClient):
-#     name = 'Johnny'
-#     rv = client.get('/hello/' + name)
+def tests_hello_page_with_name(client: FlaskClient):
+    rv = client.get('/hello/Johnny')
+    assert b'Hello Page' in rv.data
+    assert b'Hello, Johnny!' in rv.data
