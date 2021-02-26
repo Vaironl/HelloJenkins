@@ -1,6 +1,4 @@
-import flask
 import pytest
-from pathlib import Path
 from app import driver
 
 @pytest.fixture
