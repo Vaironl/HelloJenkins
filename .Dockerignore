@@ -1,8 +1,9 @@
-# Ignore cache files
 *__pycache__
 *.pyc
 *.pyo
 *.pyd
+*.pytest_cache
+
 Dockerfile
 
 /test-reports
