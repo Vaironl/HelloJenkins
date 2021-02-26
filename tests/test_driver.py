@@ -1,11 +1,11 @@
 import flask
 import pytest
 from pathlib import Path
-from app.driver import app
+from app import driver
 
 @pytest.fixture
-def setUp():
-    yield app.test_client()
+def client():
+    driver.app.config['TESTING'] = True
 
-def test_index(client):
-    return app.
+    with driver.app.test_client() as client:
+        yield client
