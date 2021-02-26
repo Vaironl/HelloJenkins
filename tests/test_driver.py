@@ -19,6 +19,11 @@ def tests_hello_page(client: FlaskClient):
     assert b'Hello Page' in rv.data
     assert b'Hello, World(s)!' in rv.data
 
+def tests_hello_dir(client: FlaskClient):
+    rv = client.get('/hello')
+    assert b'Hello Page' in rv.data
+    assert b'Hello, World(s)!' in rv.data
+
 def tests_hello_page_with_name(client: FlaskClient):
     rv = client.get('/hello/Johnny')
     assert b'Hello Page' in rv.data
