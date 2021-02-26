@@ -12,10 +12,7 @@ def index():
 @app.route('/hello')
 @app.route('/hello/<firstname>')
 def say_hello(firstname=None):
-    if firstname != None:
-        return render_template('hello.html', firstname=firstname)
-    else:
-        return "Testing Hello Function."
+    return render_template('hello.html', firstname=firstname)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
