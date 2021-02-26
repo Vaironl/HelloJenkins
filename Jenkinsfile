@@ -6,7 +6,7 @@ node {
   customImage.inside{
     sh 'echo Running Python tests'
     sh 'echo '
-    sh 'pytests tests/test_basic.py'
-    sh 'pytests tests/test_driver.py'
+    sh 'pytest tests/test_basic.py'
+    sh 'pytest tests/test_driver.py'
   }
 }
